@@ -7,12 +7,8 @@ entity FieldTasks : cuid, managed {
   description  : String(500);
   status       : String(30) default 'OPEN';
   assignedTo   : String(255);
-  latitude     : Decimal(9,6);
-  longitude    : Decimal(9,6);
+  latitude     : Double;
+  longitude    : Double;
   locationTime : Timestamp;
-}
-
-annotate FieldTasks with {
-    modifiedAt @odata.etag;
 }
 
